@@ -18,6 +18,7 @@ outputs:
   - name: {{ name }}
     build:
       script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
@@ -177,6 +178,8 @@ outputs:
         - google.type.timeofday_pb2
 
   - name: {{ name }}-grpc
+    build:
+      skip: True  # [win and vc<14]
     requirements:
       host:
         - python
