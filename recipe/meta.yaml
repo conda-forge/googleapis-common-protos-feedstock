@@ -83,8 +83,6 @@ outputs:
         - google.protobuf.empty_pb2
         - google.protobuf.field_mask_pb2
         - google.protobuf.internal
-        - google.protobuf.internal._api_implementation
-        - google.protobuf.internal._parameterized
         - google.protobuf.internal.any_test_pb2
         - google.protobuf.internal.api_implementation
         - google.protobuf.internal.containers
@@ -244,8 +242,6 @@ outputs:
         - google.protobuf.empty_pb2
         - google.protobuf.field_mask_pb2
         - google.protobuf.internal
-        - google.protobuf.internal._api_implementation
-        - google.protobuf.internal._parameterized
         - google.protobuf.internal.any_test_pb2
         - google.protobuf.internal.api_implementation
         - google.protobuf.internal.containers
