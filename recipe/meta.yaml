@@ -85,8 +85,6 @@ outputs:
         - google.protobuf.message
         - google.protobuf.message_factory
         - google.protobuf.proto_builder
-        - google.protobuf.pyext
-        - google.protobuf.pyext.python_pb2
         - google.protobuf.reflection
         - google.protobuf.service
         - google.protobuf.service_reflection
@@ -180,8 +178,6 @@ outputs:
         - google.protobuf.message
         - google.protobuf.message_factory
         - google.protobuf.proto_builder
-        - google.protobuf.pyext
-        - google.protobuf.pyext.python_pb2
         - google.protobuf.reflection
         - google.protobuf.service
         - google.protobuf.service_reflection
