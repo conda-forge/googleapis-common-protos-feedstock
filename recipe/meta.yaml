@@ -96,7 +96,6 @@ outputs:
         - google.protobuf.timestamp_pb2
         - google.protobuf.type_pb2
         - google.protobuf.util
-        - google.protobuf.util.json_format_proto3_pb2
         - google.protobuf.wrappers_pb2
         - google.rpc
         - google.rpc.code_pb2
@@ -189,7 +188,6 @@ outputs:
         - google.protobuf.timestamp_pb2
         - google.protobuf.type_pb2
         - google.protobuf.util
-        - google.protobuf.util.json_format_proto3_pb2
         - google.protobuf.wrappers_pb2
         - google.rpc
         - google.rpc.code_pb2
