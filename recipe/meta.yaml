@@ -1,5 +1,5 @@
-{% set sha256 = "560716c807117394da12cecb0a54da5a451b5cf9866f1d37e9a5e2329a665351" %}
-{% set version = "1.52.0" %}
+{% set sha256 = "a88ee8903aa0a81f6c3cec2d5cf62d3c8aa67c06439b0496b49048fb1854ebf4" %}
+{% set version = "1.53.0" %}
 {% set name = "googleapis-common-protos" %}
 
 package:
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
