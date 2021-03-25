@@ -1,5 +1,5 @@
-{% set sha256 = "560716c807117394da12cecb0a54da5a451b5cf9866f1d37e9a5e2329a665351" %}
-{% set version = "1.52.0" %}
+{% set sha256 = "a88ee8903aa0a81f6c3cec2d5cf62d3c8aa67c06439b0496b49048fb1854ebf4" %}
+{% set version = "1.53.0" %}
 {% set name = "googleapis-common-protos" %}
 
 package:
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -35,11 +35,11 @@ outputs:
       host:
         - python
         - pip >=18.1
-        - protobuf >=3.6.0
+        - protobuf >=3.12.0
         - setuptools >=34.0.0
       run:
         - python
-        - protobuf
+        - protobuf >=3.12.0
     test:
       imports:
         - google.api
@@ -156,7 +156,7 @@ outputs:
         - google.type.quaternion_pb2
         - google.type.timeofday_pb2
     about:
-      home: https://github.com/googleapis/googleapis
+      home: https://github.com/googleapis/api-common-protos
       license: Apache-2.0
       license_file: LICENSE
       license_family: APACHE
@@ -177,11 +177,11 @@ outputs:
         - Python 2.7 support will be removed on January 1, 2020.
         - protobuf does not support Visual C++ 2008, windows py27 package not available
 
-      doc_url: https://github.com/googleapis/googleapis/blob/master/README.md
-      dev_url: https://github.com/googleapis/googleapis
+      doc_url: https://github.com/googleapis/api-common-protos/blob/master/README.md
+      dev_url: https://github.com/googleapis/api-common-protos
 
 about:
-  home: https://github.com/googleapis/googleapis
+  home: https://github.com/googleapis/api-common-protos
   license: Apache-2.0
   license_file: LICENSE
   license_family: APACHE
