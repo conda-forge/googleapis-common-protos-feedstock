@@ -33,7 +33,21 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.com/conda-forge/googleapis-common-protos-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/googleapis-common-protos-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr><tr>
+    <td>Drone</td>
+    <td>
+      <a href="https://cloud.drone.io/conda-forge/googleapis-common-protos-feedstock">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/googleapis-common-protos-feedstock/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -251,6 +265,7 @@ Installing `googleapis-common-protos-feedstock` from the `conda-forge` channel c
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `googleapis-common-protos, googleapis-common-protos-grpc` can be installed with:
