@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/googleapis-comm
 
 Summary: Common protobufs used in Google APIs
 
-Development: https://github.com/googleapis/googleapis
+Development: https://github.com/googleapis/python-api-common-protos
 
-Documentation: https://github.com/googleapis/googleapis/blob/master/README.md
+Documentation: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
 
 This package does not include the grpc extra requirements.
 
@@ -33,14 +33,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://travis-ci.com/conda-forge/googleapis-common-protos-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/googleapis-common-protos-feedstock/master.svg?label=macOS">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
