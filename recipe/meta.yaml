@@ -1,6 +1,5 @@
-{% set sha256 = "27a849d6205838fb6cc3c1c21cb9800707a661bb21c6ce7fb13e99eb1f8a0c46" %}
-{% set version = "1.57.0" %}
 {% set name = "googleapis-common-protos" %}
+{% set version = "1.57.0" %}
 
 package:
   name: {{ name|lower }}-feedstock
@@ -8,39 +7,30 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 27a849d6205838fb6cc3c1c21cb9800707a661bb21c6ce7fb13e99eb1f8a0c46
 
 build:
-  number: 0
-  skip: true  # [win and vc<14]
+  noarch: python
+  number: 1
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
-    - pip >=18.1
-    - setuptools >=34.0.0
+    - python >=3.7
 
 outputs:
   - name: {{ name }}
     build:
-      script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
-      skip: true  # [win and vc<14]
+      noarch: python
+      script: {{ PYTHON }} -m pip install . -vv
     requirements:
-      build:
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
-        - python
-        - pip >=18.1
-        - protobuf >=3.12.0
-        - setuptools >=34.0.0
+        - python >=3.7
+        - pip
       run:
-        - python
-        - protobuf >=3.12.0
+        - python >=3.7
+        - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     test:
+
       imports:
         - google.api
         - google.api.annotations_pb2
@@ -91,17 +81,21 @@ outputs:
         - google.type.postal_address_pb2
         - google.type.quaternion_pb2
         - google.type.timeofday_pb2
+      commands:
+        - pip check
+      requires:
+        - pip
 
   - name: {{ name }}-grpc
     build:
-      skip: true  # [win and vc<14]
+      noarch: python
     requirements:
       host:
-        - python
-        - grpcio >=1.0.0
+        - python >=3.7
       run:
+        - python >=3.7
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-        - grpcio >=1.0.0
+        - grpcio >=1.44.0,<2.0.0dev
     test:
       imports:
         - google.api
@@ -155,52 +149,23 @@ outputs:
         - google.type.postal_address_pb2
         - google.type.quaternion_pb2
         - google.type.timeofday_pb2
-    about:
-      home: https://github.com/googleapis/api-common-protos
-      license: Apache-2.0
-      license_file: LICENSE
-      license_family: APACHE
-      summary: Common protobufs used in Google APIs
-      description: |
-        {{ name }}-grpc installs {{ name }} and the grpc extra requirements.
-
-        This repository contains the original interface definitions of public
-        Google APIs that support both REST and gRPC protocols. Reading the original
-        interface definitions can provide a better understanding of Google APIs and
-        help you to utilize them more efficiently. You can also use these definitions
-        with open source tools to generate client libraries, documentation,
-        and other artifacts.
-
-        **Deprecated Python Versions**
-
-        Python == 2.7
-        - Python 2.7 support will be removed on January 1, 2020.
-        - protobuf does not support Visual C++ 2008, windows py27 package not available
-
-      doc_url: https://github.com/googleapis/api-common-protos/blob/master/README.md
-      dev_url: https://github.com/googleapis/api-common-protos
+      commands:
+        - pip check
+      requires:
+        - pip
 
 about:
-  home: https://github.com/googleapis/api-common-protos
+  home: https://github.com/googleapis/python-api-common-protos
   license: Apache-2.0
   license_file: LICENSE
   license_family: APACHE
   summary: Common protobufs used in Google APIs
   description: |
-    This package does not include the grpc extra requirements.
+    Google APIs common protos
 
-    This repository contains the original interface definitions of public
-    Google APIs that support both REST and gRPC protocols. Reading the original
-    interface definitions can provide a better understanding of Google APIs and
-    help you to utilize them more efficiently. You can also use these definitions
-    with open source tools to generate client libraries, documentation,
-    and other artifacts.
-
-    **Deprecated Python Versions**
-
-    Python == 2.7
-    - Python 2.7 support will be removed on January 1, 2020.
-    - protobuf does not support Visual C++ 2008, windows py27 package not available
+    googleapis-common-protos contains the python classes generated from the 
+    common protos in the https://github.com/googleapis/api-common-protos
+    repository.
 
   doc_url: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
   dev_url: https://github.com/googleapis/python-api-common-protos
@@ -211,3 +176,4 @@ extra:
     - leahecole
     - parthea
     - tswast
+    - xylar
