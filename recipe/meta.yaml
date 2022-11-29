@@ -11,11 +11,12 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
 
 requirements:
   host:
     - python >=3.7
+    - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 
 outputs:
   - name: {{ name }}
@@ -23,16 +24,16 @@ outputs:
       noarch: python
       script: |
         rm -rf test MANIFEST.in
-        {{ PYTHON }} -m pip install . -vv
+        {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
     requirements:
       host:
         - python >=3.7
         - pip
+        - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
       run:
         - python >=3.7
         - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     test:
-
       imports:
         - google.api
         - google.api.annotations_pb2
