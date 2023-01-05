@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/googleapis-common-protos-{{ version }}.tar.gz
   sha256: e877f2f041b640b4888b6917dde4f44515ab938bf744c4dbc06f11f0e8ed56b5
 
 build:
