@@ -1,11 +1,52 @@
+About googleapis-common-protos-feedstock-feedstock
+==================================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/googleapis-common-protos-feedstock/blob/main/LICENSE.txt)
+
 About googleapis-common-protos-feedstock
-========================================
+----------------------------------------
 
 Home: https://github.com/googleapis/python-api-common-protos
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/googleapis-common-protos-feedstock/blob/main/LICENSE.txt)
+Summary: Common protobufs used in Google APIs
+
+Development: https://github.com/googleapis/python-api-common-protos
+
+Documentation: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
+
+Google APIs common protos
+
+googleapis-common-protos contains the python classes generated from the 
+common protos in the https://github.com/googleapis/api-common-protos
+repository.
+
+About googleapis-common-protos
+------------------------------
+
+Home: https://github.com/googleapis/python-api-common-protos
+
+Package license: Apache-2.0
+
+Summary: Common protobufs used in Google APIs
+
+Development: https://github.com/googleapis/python-api-common-protos
+
+Documentation: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
+
+Google APIs common protos
+
+googleapis-common-protos contains the python classes generated from the
+common protos in the https://github.com/googleapis/api-common-protos
+repository.
+
+About googleapis-common-protos-grpc
+-----------------------------------
+
+Home: https://github.com/googleapis/python-api-common-protos
+
+Package license: Apache-2.0
 
 Summary: Common protobufs used in Google APIs
 
