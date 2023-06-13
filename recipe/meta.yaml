@@ -1,5 +1,5 @@
 {% set name = "googleapis-common-protos" %}
-{% set version = "1.58.0" %}
+{% set version = "1.59.1" %}
 
 package:
   name: {{ name|lower }}-feedstock
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/googleapis-common-protos-{{ version }}.tar.gz
-  sha256: c727251ec025947d545184ba17e3578840fc3a24a0516a020479edab660457df
+  sha256: b35d530fe825fb4227857bc47ad84c33c809ac96f312e13182bdeaa2abe1178a
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - python >=3.7
-    - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+    - protobuf >=3.19.5,<5.0.0dev0,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 
 outputs:
   - name: {{ name }}
@@ -29,10 +29,10 @@ outputs:
       host:
         - python >=3.7
         - pip
-        - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+        - protobuf >=3.19.5,<5.0.0dev0,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
       run:
         - python >=3.7
-        - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+        - protobuf >=3.19.5,<5.0.0dev0,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     test:
       imports:
         - google.api
@@ -98,7 +98,7 @@ outputs:
       run:
         - python >=3.7
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-        - grpcio >=1.44.0,<2.0.0dev
+        - grpcio >=1.44.0,<2.0.0dev0
     test:
       imports:
         - google.api
