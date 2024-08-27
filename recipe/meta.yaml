@@ -1,5 +1,5 @@
 {% set name = "googleapis-common-protos" %}
-{% set version = "1.64.0" %}
+{% set version = "1.65.0" %}
 
 package:
   name: {{ name|lower }}-feedstock
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7d77ca6b7c0c38eb6b1bab3b4c9973acf57ce4f2a6d3a4136acba10bcbfb3025
+  sha256: 334a29d07cddc3aa01dee4988f9afd9b2916ee2ff49d6b757155dc0d197852c0
 
 build:
   noarch: python
