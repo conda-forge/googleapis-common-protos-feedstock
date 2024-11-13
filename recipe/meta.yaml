@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: c3e7b33d15fdca5374cc0a7346dd92ffa847425cc4ea941d970f13680052ec8c
 
 build:
@@ -15,7 +15,7 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - protobuf >=3.20.2,<6.0.0.dev0,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 outputs:
   - name: {{ name }}
@@ -26,12 +26,12 @@ outputs:
         {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
     requirements:
       host:
-        - python >=3.7
+        - python {{ python_min }}
         - pip
         - protobuf >=3.20.2,<6.0.0.dev0,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
         - setuptools
       run:
-        - python >=3.7
+        - python >={{ python_min }}
         - protobuf >=3.20.2,<6.0.0.dev0,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     test:
       imports:
@@ -87,6 +87,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   - name: {{ name }}-grpc
@@ -94,9 +95,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.7
+        - python {{ python_min }}
       run:
-        - python >=3.7
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - grpcio >=1.44.0,<2.0.0dev0
     test:
@@ -155,6 +156,7 @@ outputs:
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
 about:
