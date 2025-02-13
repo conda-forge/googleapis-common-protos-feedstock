@@ -160,7 +160,7 @@ outputs:
         - pip
 
 about:
-  home: https://github.com/googleapis/python-api-common-protos
+  home: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
   license: Apache-2.0
   license_file: LICENSE
   license_family: APACHE
@@ -172,8 +172,8 @@ about:
     common protos in the https://github.com/googleapis/api-common-protos
     repository.
 
-  doc_url: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
-  dev_url: https://github.com/googleapis/python-api-common-protos
+  doc_url: https://github.com/googleapis/google-cloud-python/blob/main/packages/googleapis-common-protos/README.rst
+  dev_url: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
 
 extra:
   recipe-maintainers:
