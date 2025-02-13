@@ -7,15 +7,15 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/googleapis-comm
 About googleapis-common-protos-feedstock
 ----------------------------------------
 
-Home: https://github.com/googleapis/python-api-common-protos
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
 
 Package license: Apache-2.0
 
 Summary: Common protobufs used in Google APIs
 
-Development: https://github.com/googleapis/python-api-common-protos
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
 
-Documentation: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
+Documentation: https://github.com/googleapis/google-cloud-python/blob/main/packages/googleapis-common-protos/README.rst
 
 Google APIs common protos
 
@@ -27,15 +27,15 @@ repository.
 About googleapis-common-protos
 ------------------------------
 
-Home: https://github.com/googleapis/python-api-common-protos
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
 
 Package license: Apache-2.0
 
 Summary: Common protobufs used in Google APIs
 
-Development: https://github.com/googleapis/python-api-common-protos
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
 
-Documentation: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
+Documentation: https://github.com/googleapis/google-cloud-python/blob/main/packages/googleapis-common-protos/README.rst
 
 Google APIs common protos
 
@@ -47,15 +47,15 @@ repository.
 About googleapis-common-protos-grpc
 -----------------------------------
 
-Home: https://github.com/googleapis/python-api-common-protos
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
 
 Package license: Apache-2.0
 
 Summary: Common protobufs used in Google APIs
 
-Development: https://github.com/googleapis/python-api-common-protos
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
 
-Documentation: https://github.com/googleapis/python-api-common-protos/blob/main/README.md
+Documentation: https://github.com/googleapis/google-cloud-python/blob/main/packages/googleapis-common-protos/README.rst
 
 Google APIs common protos
 
