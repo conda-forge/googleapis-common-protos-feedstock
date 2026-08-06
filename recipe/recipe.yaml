@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: googleapis-common-protos
-  version: "1.75.0"
+  version: "1.75.1"
 
 recipe:
   name: ${{ name|lower }}-feedstock
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 53a062ff3c32552fbd62c11fe23768b78e4ddf0494d5e5fd97d3f4689c75fbbd
+  sha256: d3042c6c5a2d4e67113104d6b6818b59b6bd92a197f2a91508e801fe815cf071
 
 build:
   number: 0
