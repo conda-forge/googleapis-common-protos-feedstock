@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: googleapis-common-protos
-  version: "1.75.0"
+  version: "1.75.1"
 
 recipe:
   name: ${{ name|lower }}-feedstock
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 53a062ff3c32552fbd62c11fe23768b78e4ddf0494d5e5fd97d3f4689c75fbbd
+  sha256: d3042c6c5a2d4e67113104d6b6818b59b6bd92a197f2a91508e801fe815cf071
 
 build:
   number: 0
@@ -27,11 +27,11 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - protobuf >=4.25.8,<8.0.0
+        - protobuf >=6.33.5,<8.0.0
         - setuptools
       run:
         - python >=${{ python_min }}
-        - protobuf >=4.25.8,<8.0.0
+        - protobuf >=6.33.5,<8.0.0
     tests:
       - python:
           imports:
@@ -85,7 +85,9 @@ outputs:
             - google.type.quaternion_pb2
             - google.type.timeofday_pb2
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
   - package:
       name: ${{ name }}-grpc
@@ -97,7 +99,7 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage(name, lower_bound='x.x', upper_bound='x.x') }}
-        - grpcio >=1.44.0,<2.0.0
+        - grpcio >=1.59.0,<2.0.0
     tests:
       - python:
           imports:
@@ -153,7 +155,9 @@ outputs:
             - google.type.quaternion_pb2
             - google.type.timeofday_pb2
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
 about:
   homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/googleapis-common-protos
