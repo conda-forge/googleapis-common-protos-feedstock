@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: googleapis-common-protos
-  version: "1.75.1"
+  version: "1.75.2"
 
 recipe:
   name: ${{ name|lower }}-feedstock
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: d3042c6c5a2d4e67113104d6b6818b59b6bd92a197f2a91508e801fe815cf071
+  sha256: 8829a3d1e4508c5b7b9a6b9525f7fccff611f8531644579a76466c29295d4bb2
 
 build:
   number: 0
@@ -27,7 +27,6 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - protobuf >=6.33.5,<8.0.0
         - setuptools
       run:
         - python >=${{ python_min }}
