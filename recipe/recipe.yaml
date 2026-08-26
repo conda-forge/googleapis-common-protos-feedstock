@@ -27,7 +27,6 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - protobuf >=6.33.5,<8.0.0
         - setuptools
       run:
         - python >=${{ python_min }}
